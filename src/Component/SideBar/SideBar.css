@@ -1,0 +1,31 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    width: 250px;
+
+
+}
+
+.sidebar-items {
+    color: #737D94;
+    display: inline-flex;
+    gap: 5px;
+    padding: 5px 20px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 140%;
+
+}
+
+.sidebar-items:hover{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    background-color: #5DA9E9;
+    border-radius: 10px;
+    width: 207px;
+}
