@@ -25,6 +25,11 @@ const components = [
   "Meat & Seafood",
 ];
   
+// {sidbar((section) => (
+//   <button key={section.id} onClick={() => handleClick(section.id)}>
+//     {section.value}
+//   </button>
+// ))}
 
 const SideBar = () => {
   return (

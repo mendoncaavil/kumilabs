@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./MainPage.css";
 import vector from "../Assets/vector.png";
 import fruit1 from "../Assets/fruit1.png";
@@ -7,6 +7,7 @@ import fruit3 from "../Assets/fruit3.png";
 import fruit4 from "../Assets/fruit4.png";
 import add from "../Assets/add.png";
 import minus from "../Assets/minus.png";
+
 
 import { useSelector, useDispatch } from "react-redux";
 import { inNum, deNum } from "../../Actions/Index";
@@ -19,6 +20,7 @@ function MainPage() {
     const counter = useSelector(state => state.changeNumber);
     const dispatch = useDispatch();
 
+    const targetElement = useRef(null); 
 
     const addtoCart = (id) => {
       // console.log(id);
@@ -57,6 +59,30 @@ function MainPage() {
       name: "blackberries",
       weight: "1 lb",
     },
+    {
+      image: `${fruit1}`,
+      price: "$0.69",
+      name: "Banana 1 ct",
+      weight: "18 oz",
+    },
+    {
+      image: `${fruit2}`,
+      price: "$0.69",
+      name: "Strawberries",
+      weight: "1 lb",
+    },
+    {
+      image: `${fruit3}`,
+      price: "$0.69",
+      name: "Yoghurt",
+      weight: "1 lb",
+    },
+    {
+      image: `${fruit4}`,
+      price: "$0.69",
+      name: "blackberries",
+      weight: "1 lb",
+    },
   ];
 
 
@@ -64,7 +90,7 @@ function MainPage() {
   return (
     <div className="main-wrapper">
       <div className="main-display" >
-        <h1 className="heading-section-1">
+        <h1 className="heading-section-1" id="produce">
           Produce
           <span className='arrow-img'>
             <img src={vector} />
@@ -197,9 +223,6 @@ function MainPage() {
                     <img src={add} />
                   </span>
                   <div>
-                    <p>{item.price}</p>
-                    <p>{item.name}</p>
-                    <p>{item.weight}</p>
                     <p>{item.price}</p>
                     <p>{item.name}</p>
                     <p>{item.weight}</p>
