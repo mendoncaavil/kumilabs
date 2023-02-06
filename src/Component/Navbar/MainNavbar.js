@@ -13,7 +13,7 @@ export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
+        
         sx={{ backgroundColor: "#FFE475", height: "102px" }}
       >
         <Toolbar>
@@ -35,7 +35,7 @@ export default function ButtonAppBar() {
             <p className="shopping-cart-logo">
               <FiShoppingCart />
             </p>
-            <p>{counter}</p>
+            <p>{counter < 0 ? alert("Kindly add product into your cart"): counter}</p>
           </div>
         </Toolbar>
       </AppBar>

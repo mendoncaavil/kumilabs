@@ -1,0 +1,143 @@
+.products-wrapper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 180px;
+}
+.combine{
+    width: 85%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 15%;
+    overflow-x: hidden;
+}
+.combine::-webkit-scrollbar {
+    width: 10px;
+    
+}
+ 
+.combine::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.combine::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 177, 238);
+  border-radius: 25%;
+}
+
+.sideBar{
+    display: flex;
+    width: 14%;
+    height: 800px;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: fixed;
+}
+
+.sideBar::-webkit-scrollbar {
+    width: 10px;
+    
+}
+ 
+.sideBar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.sideBar::-webkit-scrollbar-thumb {
+  background-color: rgb(120, 177, 238);
+  border-radius: 25%;
+}
+
+button{
+    margin: 10px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-radius: 10%;
+    font-weight: bold;
+    border: solid #FFF;
+    background-color: #FFF;
+    font-size: inherit;
+}
+
+button:focus{
+    background-color: rgb(135, 215, 255);
+    color: white;
+}
+
+.button-box{
+    color: #737D94;
+    gap: 5px;
+    padding: 5px 20px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+.button-box:hover{
+    padding: 10px 10px 10px 10px;
+    background-color: #5DA9E9;
+    border-radius: 10px;
+    width: 207px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .products-wrapper{
+        display: flex;
+        flex-direction: column;
+        top: 130px;
+    }
+
+    .combine{
+        left: 2%;
+    top: 20px;
+    width: 100%;
+    }
+
+    .button-box{
+        height: 80px;
+        width: 80px;
+        align-items: center;
+        text-align: center;
+        font-size: small;
+        background-color: lightgrey;
+        border-color: #EDEDED;
+    }
+
+
+    .sideBar {
+    width: 100%;
+    height: 100px;
+      flex-direction: row;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      position: relative;
+    }
+
+    .sideBar::-webkit-scrollbar {
+        height: 3px;
+        
+    }
+    button{
+        margin: 0px 10px;
+        padding: 0px;
+        height: 20px;
+        font-size: small;
+       color: rgb(126, 126, 126);;
+    }
+    button:focus{
+        color: rgb(56, 139, 255);
+        background-color: white;
+    }
+  }
+
