@@ -14,8 +14,7 @@ import { inNum, deNum } from "../../Actions/Index";
 
 function MainPage() { 
 
-  const[toggle, setToggle] = useState([]);
-
+  const[toggle, setToggle] = useState(true);
 
     const counter = useSelector(state => state.changeNumber);
     const dispatch = useDispatch();
@@ -23,61 +22,75 @@ function MainPage() {
     const targetElement = useRef(null); 
 
     const addtoCart = (id) => {
-      // console.log(id);
-      dispatch(inNum(id));      
-      setToggle((oldItems)=>[...oldItems, id])
-      console.log(toggle)
+       if(id!== 0){
+        dispatch(inNum())
+       } else{
+        dispatch(deNum())
+       } 
+      setToggle(false)
+      console.log(id)
+
     }
 
     const removefromCart = (id) => {
-      dispatch(deNum(id));
+      dispatch(deNum());
       setToggle(true)
+      console.log(id)
     }
 
   const arr = [
     {
+      id: 1,
       image: `${fruit1}`,
       price: "$0.69",
       name: "Banana 1 ct",
       weight: "18 oz",
+     
     },
     {
+      id: 2,
       image: `${fruit2}`,
       price: "$0.69",
       name: "Strawberries",
       weight: "1 lb",
     },
     {
+      id: 3,
       image: `${fruit3}`,
       price: "$0.69",
       name: "Yoghurt",
       weight: "1 lb",
     },
     {
+      id: 4,
       image: `${fruit4}`,
       price: "$0.69",
       name: "blackberries",
       weight: "1 lb",
     },
     {
+      id: 5,
       image: `${fruit1}`,
       price: "$0.69",
       name: "Banana 1 ct",
       weight: "18 oz",
     },
     {
+      id: 6,
       image: `${fruit2}`,
       price: "$0.69",
       name: "Strawberries",
       weight: "1 lb",
     },
     {
+      id: 7,
       image: `${fruit3}`,
       price: "$0.69",
       name: "Yoghurt",
       weight: "1 lb",
     },
     {
+      id: 8,
       image: `${fruit4}`,
       price: "$0.69",
       name: "blackberries",
@@ -100,14 +113,11 @@ function MainPage() {
           {arr.map((item, id) => {
             return (
               <>
-                <div>
+                <div key={id}>
                   <img src={item.image} alt={item.image} />
                   <span className="addtocartIcon">
-                    {toggle.find((toggledId)=>{
-                      return toggledId === id
-                    }) === null ? <img src={minus} onClick={()=> removefromCart(id)} /> : 
-                    <img src={add} onClick={()=> addtoCart(id)} />}
-                    
+                    <img src={add} onClick={()=> addtoCart(item.id)} /> 
+                    <img src={minus} onClick={()=> removefromCart(item.id)} />        
                   </span>
                   <div>
                     <p className="product_price">{item.price}</p>
@@ -122,26 +132,27 @@ function MainPage() {
       </div>
 
 
-      <div className="main-display">
-        <h1 className="heading-section-1">
-          Prepared foods
+      <div className="main-display" >
+        <h1 className="heading-section-1" id="produce">
+          Produce
           <span className='arrow-img'>
             <img src={vector} />
           </span>
         </h1>
         <div className="products">
-          {arr.map((item) => {
+          {arr.map((item, id) => {
             return (
               <>
-                <div>
+                <div key={id}>
                   <img src={item.image} alt={item.image} />
                   <span className="addtocartIcon">
-                    <img src={add} />
+                   <img src={add} onClick={()=> addtoCart(item.id)} /> 
+                    <img src={minus} onClick={()=> removefromCart(item.id)} />                    
                   </span>
                   <div>
-                    <p>{item.price}</p>
-                    <p>{item.name}</p>
-                    <p>{item.weight}</p>
+                    <p className="product_price">{item.price}</p>
+                    <p className="product_name">{item.name}</p>
+                    <p className="product_weight">{item.weight}</p>
                   </div>
                 </div>
               </>
@@ -150,26 +161,27 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="main-display">
-        <h1 className="heading-section-1">
-          Canned food & Soups
+      <div className="main-display" >
+        <h1 className="heading-section-1" id="produce">
+          Produce
           <span className='arrow-img'>
             <img src={vector} />
           </span>
         </h1>
         <div className="products">
-          {arr.map((item) => {
+          {arr.map((item, id) => {
             return (
               <>
-                <div>
+                <div key={id}>
                   <img src={item.image} alt={item.image} />
                   <span className="addtocartIcon">
-                    <img src={add} />
+                  <img src={add} onClick={()=> addtoCart(item.id)} /> 
+                    <img src={minus} onClick={()=> removefromCart(item.id)} />               
                   </span>
                   <div>
-                    <p>{item.price}</p>
-                    <p>{item.name}</p>
-                    <p>{item.weight}</p>
+                    <p className="product_price">{item.price}</p>
+                    <p className="product_name">{item.name}</p>
+                    <p className="product_weight">{item.weight}</p>
                   </div>
                 </div>
               </>
@@ -178,26 +190,27 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="main-display">
-        <h1 className="heading-section-1">
-          Frozen
+      <div className="main-display" >
+        <h1 className="heading-section-1" id="produce">
+          Produce
           <span className='arrow-img'>
             <img src={vector} />
           </span>
         </h1>
         <div className="products">
-          {arr.map((item) => {
+          {arr.map((item, id) => {
             return (
               <>
-                <div>
+                <div key={id}>
                   <img src={item.image} alt={item.image} />
                   <span className="addtocartIcon">
-                    <img src={add} />
+                  <img src={add} onClick={()=> addtoCart(item.id)} /> 
+                    <img src={minus} onClick={()=> removefromCart(item.id)} />                 
                   </span>
                   <div>
-                    <p>{item.price}</p>
-                    <p>{item.name}</p>
-                    <p>{item.weight}</p>
+                    <p className="product_price">{item.price}</p>
+                    <p className="product_name">{item.name}</p>
+                    <p className="product_weight">{item.weight}</p>
                   </div>
                 </div>
               </>
@@ -206,26 +219,27 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="main-display">
-        <h1 className="heading-section-1">
-          Meat & Seafood
-          <span className='arrow-img'> 
+      <div className="main-display" >
+        <h1 className="heading-section-1" id="produce">
+          Produce
+          <span className='arrow-img'>
             <img src={vector} />
           </span>
         </h1>
         <div className="products">
-          {arr.map((item) => {
+          {arr.map((item, id) => {
             return (
               <>
-                <div>
+                <div key={id}>
                   <img src={item.image} alt={item.image} />
                   <span className="addtocartIcon">
-                    <img src={add} />
+                  <img src={add} onClick={()=> addtoCart(item.id)} /> 
+                    <img src={minus} onClick={()=> removefromCart(item.id)} />                    
                   </span>
                   <div>
-                    <p>{item.price}</p>
-                    <p>{item.name}</p>
-                    <p>{item.weight}</p>
+                    <p className="product_price">{item.price}</p>
+                    <p className="product_name">{item.name}</p>
+                    <p className="product_weight">{item.weight}</p>
                   </div>
                 </div>
               </>
@@ -234,26 +248,27 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="main-display" id="Bakery">
-        <h1 className="heading-section-1">
-          Bakery
+      <div className="main-display" >
+        <h1 className="heading-section-1" id="produce">
+          Produce
           <span className='arrow-img'>
             <img src={vector} />
           </span>
         </h1>
         <div className="products">
-          {arr.map((item) => {
+          {arr.map((item, id) => {
             return (
               <>
-                <div>
+                <div key={id}>
                   <img src={item.image} alt={item.image} />
                   <span className="addtocartIcon">
-                    <img src={add} />
+                  <img src={add} onClick={()=> addtoCart(item.id)} /> 
+                    <img src={minus} onClick={()=> removefromCart(item.id)} />                  
                   </span>
                   <div>
-                    <p>{item.price}</p>
-                    <p>{item.name}</p>
-                    <p>{item.weight}</p>
+                    <p className="product_price">{item.price}</p>
+                    <p className="product_name">{item.name}</p>
+                    <p className="product_weight">{item.weight}</p>
                   </div>
                 </div>
               </>

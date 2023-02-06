@@ -3,7 +3,7 @@ import './SideBar.css'
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
 
-const components = [
+const arr = [
   "Prepared Foods",
   "Canned foods & Soups",
   "Bakery",
@@ -36,7 +36,7 @@ const SideBar = () => {
     <div className="sidebar_wrapper">
     <Scrollbars style={{ width: 230, height: "100vh" }} >
       <div className="sidebar">
-        {components.map((item) => (
+        {arr.map((item) => (
           <p className="sidebar-items">{item}</p>            
         ))}
       </div>
