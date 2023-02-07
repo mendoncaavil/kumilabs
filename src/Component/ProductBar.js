@@ -47,8 +47,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>Banana</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>Banana 1 ct</p>
+            <p className='product-weight'>18 oz</p>
         </div>
         <div className='single' id='2'>
             <img src={fruit2}  alt='img' />
@@ -67,8 +68,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>StrawBerry</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>StrawBerry</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='3'>
             <img src={fruit3}  alt='img' />
@@ -86,8 +88,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>Yogurt</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>Yogurt</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='4'>
             <img src={fruit4} alt='img' />
@@ -105,8 +108,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>BlackBerry</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>BlackBerry</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='5'>
             <img src={fruit2} alt='img' />
@@ -124,8 +128,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}} >$0.69</p>
-            <p style={{padding:'10px'}} >StrawBerry</p>
+            <p  className='product-price'>$0.69</p>
+            <p  className='product-name'>StrawBerry</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='6'>
             <img src={fruit3} alt='img' />
@@ -143,8 +148,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}} >$0.69</p>
-            <p style={{padding:'10px'}} >Yogurt</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>Yogurt</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='7'>
             <img src={fruit1}  alt='img' />
@@ -162,8 +168,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>Banana</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>Banana</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='8'>
             <img src={fruit4}  alt='img' />
@@ -182,8 +189,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>BlackBerry</p>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>BlackBerry</p>
+            <p className='product-weight'>1 lb</p>
         </div>
         <div className='single' id='9'>
             <img src={fruit2}  alt='img' />
@@ -201,9 +209,9 @@ function ProductBar() {
                     }}/> }
 
 
-            <p style={{padding:'10px'}}>$0.69</p>
-            <p style={{padding:'10px'}}>StrawBerry</p>
-            <h6>...</h6>
+            <p className='product-price'>$0.69</p>
+            <p className='product-name'>StrawBerry</p>
+            <p className='product-weight'>1 lb</p>
         </div>
     </div>
 
