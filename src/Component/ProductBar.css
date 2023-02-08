@@ -1,4 +1,4 @@
-.full {
+.productbar-wrapper {
     display: flex;
     width: 60%;
 }
@@ -38,23 +38,26 @@
 
 
 @media only screen and (max-width: 600px) {
-    .full {
+    .productbar-wrapper {
         width: 100%;
         height: 300px;
         overflow-y: hidden;
         overflow-x: scroll;
+        
     }
 
-    .full::-webkit-scrollbar {
+ 
+
+    .productbar-wrapper::-webkit-scrollbar {
         height: 3px;
 
     }
 
-    .full::-webkit-scrollbar-track {
+    .productbar-wrapper::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     }
 
-    .full::-webkit-scrollbar-thumb {
+    .productbar-wrapper::-webkit-scrollbar-thumb {
         background-color: rgb(120, 177, 238);
 
     }

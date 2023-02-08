@@ -7,14 +7,21 @@ import { FiShoppingCart } from "react-icons/fi";
 import { useSelector } from "react-redux";
 import './styles.css'
 
+
 export default function ButtonAppBar() {
   const counter = useSelector((state) => state.changeNumber);
 
+
+
+  
+  
+  
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} >
       <AppBar
         
-        sx={{ backgroundColor: "#FFE475", height: "102px" }}
+        sx={{ backgroundColor: "#FFE475", height: "102px" }} 
       >
         <Toolbar>
           <Typography
@@ -28,6 +35,7 @@ export default function ButtonAppBar() {
               fontSize: "30px",
               marginTop: "15px",
             }}
+
           >
             E-Commerce
           </Typography>
@@ -35,7 +43,7 @@ export default function ButtonAppBar() {
             <p className="shopping-cart-logo">
               <FiShoppingCart />
             </p>
-            <p>{counter < 0 ? alert("Kindly add product into your cart"): counter}</p>
+            <p>{counter}</p>
           </div>
         </Toolbar>
       </AppBar>

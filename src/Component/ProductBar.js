@@ -11,8 +11,6 @@ import minus from "./Assets/minus.png";
 import { useDispatch, useSelector } from 'react-redux';
 
 
-
-
 function ProductBar() {
 
     const [added1, setAdded1] = useState(false);
@@ -26,10 +24,9 @@ function ProductBar() {
     const [added9, setAdded9] = useState(false);
 
     const dispatch = useDispatch();
-    const count = useSelector((state) => state.count);
 
   return (
-    <div className='full'>
+    <div className='productbar-wrapper'>
         <div className='single' id='1'>
             <img src={fruit1}  alt='img' />
             
@@ -51,6 +48,7 @@ function ProductBar() {
             <p className='product-name'>Banana 1 ct</p>
             <p className='product-weight'>18 oz</p>
         </div>
+        
         <div className='single' id='2'>
             <img src={fruit2}  alt='img' />
 
