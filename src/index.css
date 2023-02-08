@@ -1,3 +1,11 @@
+.heading-bar-name{
+  font-family: 'Mortise';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+
 @media only screen and (max-width: 600px){
 
     .mobile-drawer{

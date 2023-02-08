@@ -5,7 +5,7 @@ import Productbar from "./ProductBar";
 function Produce({text}, produce) {
   return (
     <div ref = {produce}>
-      <h1>{text}</h1>
+      <h1 >{text}</h1>
       <Productbar />
     </div>
   )

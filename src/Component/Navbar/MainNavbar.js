@@ -13,15 +13,13 @@ export default function ButtonAppBar() {
 
 
 
-  
-  
-  
 
   return (
     <Box sx={{ flexGrow: 1 }} >
       <AppBar
-        
         sx={{ backgroundColor: "#FFE475", height: "102px" }} 
+
+        className="mob-navbar"
       >
         <Toolbar>
           <Typography
@@ -35,7 +33,7 @@ export default function ButtonAppBar() {
               fontSize: "30px",
               marginTop: "15px",
             }}
-
+           
           >
             E-Commerce
           </Typography>
