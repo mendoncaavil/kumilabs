@@ -1,7 +1,7 @@
 .products-wrapper{
     display: flex;
     flex-direction: row;
-    position: relative;
+    position: fixed;
     top: 112px;
 }
 .combine{
@@ -152,6 +152,11 @@ button:focus{
     button:focus{
         color: rgb(56, 139, 255);
         background-color: white;
+    }
+
+    .button-box:hover{
+      
+        width: 80px;
     }
   }
 
